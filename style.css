@@ -1,0 +1,50 @@
+.stpm--root {
+	.stpm--form {
+		display: flex;
+		gap: 0.5em;
+		text-wrap: nowrap;
+		align-items: baseline;
+	}
+	.stpm--list {
+		text-align: left;
+		display: flex;
+		flex-direction: column;
+		gap: 1em;
+		.stpm--plugin {
+			border: 1px solid var(--SmartThemeBorderColor);
+			display: flex;
+			gap: 1em;
+			padding: 0.5em;
+			border-radius: 6px;
+			.stpm--content {
+				flex: 1 1 auto;
+				.stpm--details {
+					font-size: smaller;
+					opacity: 0.75;
+					.stpm--branch:before {
+						content: "Branch: ";
+						opacity: 0.5;
+					}
+					.stpm--commit:before {
+						content: "Commit: ";
+						opacity: 0.5;
+					}
+				}
+			}
+			.stpm--actions {
+				flex: 0 0 auto;
+				display: flex;
+				flex-direction: column;
+				justify-content: flex-end;
+				align-items: stretch;
+				.stpm--action {
+					width: 100%;
+				}
+				.stpm--noupdate {
+					opacity: 0.5;
+					font-size: smaller;
+				}
+			}
+		}
+	}
+}
